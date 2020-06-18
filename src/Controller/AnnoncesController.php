@@ -23,25 +23,10 @@ class AnnoncesController extends AbstractController
      * @Route("/", name="app_home")
      */
 
+    // fonction qui permet de récuperer toutes les annonces de la BDD, et ensuite de les afficher sous forme de card avec twig et bootstrap
     public function index(AnnonceRepository $repo)
     {
-        // return $this->json([
-        //     'message' => 'Welcome to your new controller!',
-        //     'path' => 'src/Controller/AnnoncesController.php',
-        // ]);
-
-        // return new Response('Hello World !');
-
-        //return $this->render('annonces/index.html.twig');
-
-        // $annonce = new Annonce();
-
-        // $annonce->setTitle('Ma 4 annonce');
-        // $annonce->setDescription("Description de ma quatrième annonce");
-
-        // $em->persist($annonce);
-        // $em->flush();
-
+        // on recupere toutes les annonces de la bdd
         $annonces = $repo->findAll();
 
         return $this->render('annonces/index.html.twig', ['annonces' => $annonces]);
@@ -55,26 +40,23 @@ class AnnoncesController extends AbstractController
      * @return Response
      */
 
+    // fonction qui permet de récuperer une annonce dans la BDD grâce à son id
+    // et qui permet d'aller récupérer le drapeau correspondant au pays mentionné dans l'annonce grâce à l'API REST countries
     public function visualiser(Request $request, EntityManagerInterface $em): Response
     {
 
         $annonce = $em->getRepository('App:Annonce')->find($request->get('id'));
 
+        // on créé un client qui permet de faire des requetes HTTP
         $client = HttpClient::create();
+        // ensuite on fait la requete, en fonction du pays demandé dans l'annonce
         $response = $client->request('GET', 'https://restcountries.eu/rest/v2/name/'.$annonce->getCountry());
+        // ensuite on récupère le contenu de la réponse, et on le met sour forme de tableau
         $content = $response->toArray();
 
+        // puis on retourne la vue avec l'annonce et le contenu de la reponse de la requete
         return $this->render('annonces/annonce.html.twig', ['annonce' => $annonce, "api_content" => $content]);
 
-    }
-
-    /**
-     * @Route("annonce", name="app_annonce")
-     */
-
-    public function annonce(): Response
-    {
-        return $this->redirectToRoute('app_home');
     }
 
 }

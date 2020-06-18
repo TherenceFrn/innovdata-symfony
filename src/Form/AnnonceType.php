@@ -12,10 +12,10 @@ class AnnonceType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', null, ["label"=>"Titre", "attr"=> ["placeholder" => "Entrez le titre de l'annonce"]])
-            ->add('description', null, ["label"=>"Description", "attr"=> ["placeholder" => "Entrez la description de l'annonce"]])
-            ->add('price', null, ["label"=>"Prix", "attr"=> ["placeholder" => "Entrez le prix de l'annonce"]])
-            ->add('country', null, ["label"=>"Pays", "attr"=> ["placeholder" => "Entrez le pays dans lequel se situe l'annonce (dans la langue d'origine)"]])
+            ->add('title', null, ["label"=>"Titre"])
+            ->add('description', null, ["label"=>"Description"])
+            ->add('price', null, ["label"=>"Prix"])
+            ->add('country', null, ["label"=>"Pays"])
         ;
     }
 

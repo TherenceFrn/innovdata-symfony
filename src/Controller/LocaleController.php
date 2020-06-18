@@ -11,6 +11,8 @@ class LocaleController extends AbstractController
     /**
      * @Route("/locale/{locale}", name="app_locale")
      */
+
+    // fonction qui permet de changer de langue
     public function index($locale, Request $request)
     {
 
