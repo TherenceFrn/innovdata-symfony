@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {% trans %}Item{% endtrans %}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mt-4">
+        <h2>{% trans %}Item list:{% endtrans %}</h2>
+
+        {% for messsage in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ messsage }}
+            </div>
+        {% endfor %}
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>{% trans %}Title{% endtrans %}</th>
+                    <th>{% trans %}Actions{% endtrans %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for annonce in annonces %}
+                    <tr>
+                        <th>{{ annonce.title }}</th>
+                        <th>
+                            <a href="{{ path('app_annonce_index', {id: annonce.id}) }}" class="btn btn-primary">{% trans %}View{% endtrans %}</a>
+                            <a href="{{ path('admin_edit', {id: annonce.id}) }}" class="btn btn-warning">{% trans %}Edit{% endtrans %}</a>
+                            <a href="{{ path('admin_delete', {id: annonce.id}) }}" class="btn btn-danger">{% trans %}Delete{% endtrans %}</a>
+                        </th>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+{% endblock %}
+

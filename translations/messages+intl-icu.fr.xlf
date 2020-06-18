@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="gyc4WvC" resname="Item edited succesfully">
+        <source>Item edited succesfully</source>
+        <target>Annonce modifiée avec succès</target>
+      </trans-unit>
+      <trans-unit id="Ff4Wmtn" resname="Item created succesfully">
+        <source>Item created succesfully</source>
+        <target>Annonce créée avec succès</target>
+      </trans-unit>
+      <trans-unit id="HjR5wPF" resname="Item deleted succesfully">
+        <source>Item deleted succesfully</source>
+        <target>Annonce supprimée avec succès</target>
+      </trans-unit>
+      <trans-unit id="FQn1YfJ" resname="Save">
+        <source>Save</source>
+        <target>Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="ZSvMOke" resname="Item">
+        <source>Item</source>
+        <target>Annonce</target>
+      </trans-unit>
+      <trans-unit id="aLsPkCb" resname="Item list:">
+        <source>Item list:</source>
+        <target>Liste des annonces:</target>
+      </trans-unit>
+      <trans-unit id="fozSBW2" resname="Title">
+        <source>Title</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id=".4BZ3Gd" resname="Actions">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="3Mg5pAF" resname="View">
+        <source>View</source>
+        <target>Voir</target>
+      </trans-unit>
+      <trans-unit id="RkxP.QG" resname="Edit">
+        <source>Edit</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="k8kchR5" resname="Price">
+        <source>Price</source>
+        <target>Prix</target>
+      </trans-unit>
+      <trans-unit id="cB0CHQj" resname="Country">
+        <source>Country</source>
+        <target>Pays</target>
+      </trans-unit>
+      <trans-unit id="KxMjmBh" resname="Item posted on the">
+        <source>Item posted on the</source>
+        <target>Annonce postée le</target>
+      </trans-unit>
+      <trans-unit id="R1lJisK" resname="Create">
+        <source>Create</source>
+        <target>Créer</target>
+      </trans-unit>
+      <trans-unit id="CrelniH" resname="Create item">
+        <source>Create item</source>
+        <target>Créer une annonce</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {% trans %}Item{% endtrans %}
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <div class="row">
+
+                <div class="col-12 annonce-card">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ annonce.title }}</h3>
+                            <p class="card-text">{% trans %}Description{% endtrans %}: {{ annonce.description }}</p>
+                            <p class="card-text text-primary">{% trans %}Price{% endtrans %}: {{ annonce.price }} €</p>
+
+                            <p class="card-text">{% trans %}Country{% endtrans %}: {{ annonce.country }}
+                                <img src="{{ api_content.0.flag }}" class="img-locale" alt="{{ annonce.country }}">
+                            </p>
+
+
+                            <p class="card-text text-secondary">{% trans %}Item posted on the{% endtrans %} : {{ annonce.createdat|date("m/d/Y") }}</p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
